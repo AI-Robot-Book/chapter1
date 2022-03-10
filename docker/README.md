@@ -1,8 +1,5 @@
-# Chapter1
-「AIロボット入門」第1章のサポート情報．現在，テスト中．．．
-
-# Docker 
-大阪電気通信大学　升谷教授が作成された「ROS2 + VNC で CRANE+を試すDockerイメージ」の資料を改変している．
+# Docker （テスト中．．．）
+大阪電気通信大学　升谷教授が作成された「ROS2 + VNC で CRANE+を試すDockerイメージ」の資料を改変している．現在，テスト中．．．
 
 ## 概要
 VNCというリモートデスクトップアプリを使い，ウェブブラウザでROS2を使うことができるDockerfileとDockerイメージ．
@@ -38,9 +35,6 @@ docker run -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=51
 ```
 docker start -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=512m masutaniy/ros2-desktop-vnc-ai-robot-book:ver1a
 ```
-
-
-
-
+## 使い方  
 - ウェブブラウザを開き，以下にアクセスする．  
     - [http://127.0.0.1:6080](http://127.0.0.1:6080)
