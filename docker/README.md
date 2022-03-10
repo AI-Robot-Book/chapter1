@@ -36,5 +36,5 @@ docker run -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=51
 docker start -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=512m masutaniy/ros2-desktop-vnc-ai-robot-book:ver1a
 ```
 ## 使い方  
-- ウェブブラウザを開き，以下にアクセスする．  
+- コンテナを起動したら，ウェブブラウザを開き，以下にアクセスする．  
     - [http://127.0.0.1:6080](http://127.0.0.1:6080)
