@@ -13,13 +13,14 @@ Tiryohさんの以下のgithubをベースに作成されている．
 - 日本語環境
 
 
-## Dockerのインストール
-  - 次のコマンドで失敗する場合は，"Install Engine on Ubuntu"で検索してください．  
-```
-sudo apt install docker docker-compose
-```
+## Dockerのインストールと設定
+  - 次のサイトでうまくいかない場合は，"Install Engine on Ubuntu"で検索してください．  
+[Ubuntu20.04：Dockerのインストール](https://demura.net/misc/21830.html)
 
-- **Dockerイメージの作成**  
+## Dockerのインストール
+
+
+**Dockerイメージの作成**  
   - Ubuntuの端末を開き，次のコマンドを1行ごとコピペして端末に張り付けEnterキーを押して実行する．      
 ```
 cd
