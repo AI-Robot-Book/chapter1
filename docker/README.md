@@ -29,16 +29,12 @@ cd docker-ros2-desktop-vnc-ai-robot-book
 docker build --progress=plain -t masutaniy/ros2-desktop-vnc-ai-robot-book:ver1 .
 ```
 
-## コンテナの作成と起動（初回のみ） 
-  - 次のコマンドを実行して，コンテナを作成して起動する．一度，コンテナを作成したら次回からは起動するだけで良い．
+## コンテナの作成と起動
+  - 次のコマンドを実行して，コンテナを作成して起動する．
 ```
 docker run -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=512m masutaniy/ros2-desktop-vnc-ai-robot-book:ver1a
 ```
-## コンテナの起動（２回目から）
-  - 既にコンテナは作成されているので起動するだけでよい．一度，コンテナを作成したら次回からは起動するだけで良い．
-```
-docker start -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=512m masutaniy/ros2-desktop-vnc-ai-robot-book:ver1a
-```
+
 ## 使い方  
 - コンテナを起動したら，ウェブブラウザを開き，以下にアクセスする．  
     - [http://127.0.0.1:6080](http://127.0.0.1:6080)
