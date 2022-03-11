@@ -26,6 +26,7 @@ Tiryohさんの以下のgithubをベースに作成されている．
 cd
 git clone https://github.com/AI-Robot-Book/docker-ros2-desktop-vnc-ai-robot-book.git
 cd docker-ros2-desktop-vnc-ai-robot-book
+chmod +x ai-robot-book.sh
 docker build --progress=plain -t masutaniy/ros2-desktop-vnc-ai-robot-book:ver1 .
 ```
 
