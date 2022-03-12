@@ -30,10 +30,16 @@ chmod +x ai-robot-book.sh
 docker build --progress=plain -t masutaniy/ros2-desktop-vnc-ai-robot-book:ver1 .
 ```
 
-## コンテナの作成と起動
+## コンテナの作成と起動（初回だけ）
   - 次のコマンドを実行して，コンテナを作成して起動する．
 ```
 docker run -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=512m masutaniy/ros2-desktop-vnc-ai-robot-book:ver1
+```
+
+## コンテナの起動
+  - 上のコマンドだとコンテナを毎回作成してしまうので，次のコマンドを実行して，コンテナを起動だけにする．
+```
+docker start -e RESOLUTION=1920x1080 ai_robot_book -p 6080:80 --shm-size=512m 
 ```
 
 ## 使い方  
