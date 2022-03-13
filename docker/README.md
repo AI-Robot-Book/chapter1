@@ -37,7 +37,7 @@ docker run -e RESOLUTION=1920x1080 --name ai_robot_book -p 6080:80 --shm-size=51
 ```
 
 ## コンテナの起動（２回目以降）
-  - 上のコマンドだとコンテナを毎回作成してしまうので，docker startコマンドを実行して，コンテナを起動だけにする．
+  - 上のコマンドだとコンテナを毎回作成してしまうので，docker startコマンドを実行してコンテナを起動だけにする．なお，startの後は，コンテナ名かコンテナIDを入れる．ここでは，上で作成したコンテナ名ai_robot_bookとしているので適宜変更する．
 ```
 docker start ai_robot_book  
 ```
