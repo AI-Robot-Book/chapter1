@@ -47,7 +47,7 @@ docker start ai_robot_book
     - [http://127.0.0.1:6080](http://127.0.0.1:6080)
 
 ## コンテナの停止
- 次のコマンドでコンテナを停止します．
+ - 次のコマンドでコンテナを停止する．
 ```
 docker stop ai_robot_book  
 ```
