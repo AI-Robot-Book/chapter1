@@ -11,10 +11,4 @@
 - **happy_mini_simulator:** この本で使うHappy Mini Simulatorの情報を掲載します．作成中．．．
 - **non_docker:** Dockerを使わない場合のセットアップ．作成中．．．
    
-## 著　者
-
-
-## ライセンス
-
-
-## 参考文献
+## 補足情報
