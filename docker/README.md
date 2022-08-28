@@ -4,7 +4,7 @@ ROS2とPythonで作って学ぶAIロボット入門（出村・萩原・升谷�
 
 ## 概要
 
-- Dockerを使ってこの本の教材をすぐに試すことのできるデスクトップ環境を提供します．Ubuntu Linuxでは，ハードウェアの利用も可能です．Windowsでは，ハードウェアの利用はできませんが，シミュレーションの実行が可能です．MacOSでも利用できると思われますが，確認していません．
+- Dockerを使ってこの本の教材をすぐに試すことのできるデスクトップ環境を提供します．Ubuntu Linuxでは，ハードウェアの利用も可能です．Windowsでは，ハードウェアの利用はできませんが，シミュレーションの実行は可能です．MacOSでも利用できると思われますが，確認していません．
 - 提供するDockerのイメージには以下の内容が含まれており，個別のインストールは不要です．
   - Ubuntu 20.04 デスクトップ環境（日本語化済み）
   - テキストエディタ VSCodium
@@ -12,6 +12,18 @@ ROS2とPythonで作って学ぶAIロボット入門（出村・萩原・升谷�
   - この本の教材に必要なパッケージ・ライブラリ
   - この本のサンプルプログラム
 - Dockerイメージの作り方については，この文書では説明しません．[こちらのリポジトリ](https://github.com/AI-Robot-Book/docker-ros2-desktop-ai-robot-book)を見てください．
+
+## 目次
+
+- [Ubuntu Linuxの場合](#ubuntu-linuxの場合)
+- [Windowsの場合](#windowsの場合)
+- [デスクトップ環境の使い方（共通事項）](#デスクトップ環境の使い方共通事項)
+- [ハードウェアの使い方](#ハードウェアの使い方)
+- [Windows リモートデスクトップ接続の利用（未完成）](#windows-リモートデスクトップ接続の利用未完成)
+- [著者](#著者)
+- [履歴](#履歴)
+- [参考文献](#参考文献)
+
 
 ## Ubuntu Linuxの場合
 
@@ -33,7 +45,7 @@ sudo adduser ＄USER docker
   ./run.bash
   ```
 - 初めて起動する場合は，DockerHubからイメージ（約10GB）をダウンロードするので，かなり時間がかかります．
-- 以下のような内容が表示されたら，コンテナの準備完了です．
+- ずらずらとたくさんの文字が表示され，その後に以下のような内容が表示されたら，コンテナの準備完了です．
   ```
   2022-08-28 16:06:25,549 INFO success: lxpanel entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
   2022-08-28 16:06:25,549 INFO success: pcmanfm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
@@ -55,12 +67,12 @@ sudo adduser ＄USER docker
   - この本のDockerイメージで利用しているデスクトップ環境LXDEでは，画面の下辺にアイコンなどが表示されますので，このままでは操作できません．画面の左辺のタブをクリックしてnoVNCのメニューアイコンを表示します．  
     <img src="images/ubuntu-firefox-2.png" width="70%">
 
-  - Fullscreenのアイコンをクリックして，全画面表示にします．  
+  - 「Fullscreen」のアイコンをクリックして，全画面表示にします．  
     <img src="images/ubuntu-firefox-3.png" width="70%">
 
   - デスクトップ環境での操作は他と共通ですので，後述します．
 
-  - 終わりたい場合は，ログアウトやサインアウトは要りません．noVNCのメニューを出し，Dosconnectのアイコンをクリックします．ウェブブラウザ（のタブ）も閉じて構いません．
+  - 終わりたい場合は，ログアウトやサインアウトは要りません．noVNCのメニューを出し，「Disconnect」のアイコンをクリックします．ウェブブラウザ（のタブ）も閉じて構いません．
 
 - Remminaを使う場合
 
@@ -106,6 +118,8 @@ docker rm ai_robot_book
 
 ### Dockerのインストール
 
+[公式のドキュメント](https://docs.docker.jp/docker-for-windows/install.html)に従って「Docker Desktop for Windows」をインストールしてください．
+
 ### コンテナの起動
 
 - 利用するコンピュータをインターネットに接続します．
@@ -115,10 +129,10 @@ docker rm ai_robot_book
 
 - コマンドプロンプトのウィンドウ内で以下を入力して実行します．
   ```
-  run.bat
+  run
   ```
 - 初めて起動する場合は，DockerHubからイメージ（約10GB）をダウンロードするので，かなり時間がかかります．
-- 以下のような内容が表示されたら，コンテナの準備完了です．
+- ずらずらとたくさんの文字が表示され，その後に以下のような内容が表示されたら，コンテナの準備完了です．
   ```
   2022-08-28 16:06:25,549 INFO success: lxpanel entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
   2022-08-28 16:06:25,549 INFO success: pcmanfm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
@@ -135,26 +149,54 @@ docker rm ai_robot_book
   - ウェブブラウザを起動する．
   - アドレス欄に「`http://127.0.0.1:6080`」と入力しEnterキーを押します．
   - ブラウザ内に以下のような内容が表示されればOKです．  
+    <img src="images/windows-firefox-1.png" width="70%">
+
 
   - この本のDockerイメージで利用しているデスクトップ環境LXDEでは，画面の下辺にアイコンなどが表示されますので，このままでは操作できません．画面の左辺のタブをクリックしてnoVNCのメニューアイコンを表示します．  
+    <img src="images/windows-firefox-2.png" width="70%">
 
-  - Fullscreenのアイコンをクリックして，全画面表示にします．  
+  - 「Fullscreen」のアイコンをクリックして，全画面表示にします．  
+    <img src="images/windows-firefox-3.png" width="70%">
 
   - デスクトップ環境での操作は他と共通ですので，後述します．
 
-  - 終わりたい場合は，ログアウトやサインアウトは要りません．noVNCのメニューを出し，Dosconnectのアイコンをクリックします．ウェブブラウザ（のタブ）も閉じて構いません．
+  - 終わりたい場合は，ログアウトやサインアウトは要りません．noVNCのメニューを出し，「Disconnect」のアイコンをクリックします．ウェブブラウザ（のタブ）も閉じて構いません．
 
 - VNCビューアを使う場合
 
+  - Windowsで使うことのできるVNCビューアには色々ありますが，ここではTightVNC Viewerを使います．[公式サイト](https://www.tightvnc.com/download.php)から「TightVNC for Windows」のインストーラをダウンロードし，インストールしてください．TightVNC Viewerはその中に含まれています．
+  - Windowsのスタートメニューか検索からTightVNC Viewerを見つけ起動します．
+    <img src="images/windows-tightvnc-1.png" width="50%">
+
+  - 「Remote Host」欄に「127.0.0.1:15900」を入力し，「Connect」をクリックします．  
+    <img src="images/windows-tightvnc-2.png" width="50%">
+
+  - 別のウィンドウが現れ，以下のような内容が表示されればOKです．  
+    <img src="images/windows-tightvnc-3.png" width="70%">
+
+  - ウィンドウ上部のアイコンの並びの中から「Full screen」をクリックして，全画面表示にします．  
+    <img src="images/windows-tightvnc-4.png" width="70%">
+
+  - その後のパネルに説明されているように，全画面表示から戻るにはCtrl+Shift+Alt+Fの4個のキーを同時押しします．それを了解したら，パネルの「OK」をクリックします．
+
+  - デスクトップ環境での操作は他と共通ですので，後述します．
+
+  - 終わりたい場合は，ログアウトやサインアウトは要りません．全画面表示から戻り，ウィンドウの閉じるボタンをクリックします．
+
 ### コンテナの中断
 
+デスクトップ環境を切断しただけでは，まだコンテナはメモリ上に存在しています．これを停止するには，Docker Desktopで操作します．Docker Desktopのウィンドウをを開き，左側のメニューの「Containers」をクリックしてコンテナの一覧を表示します．一覧には「ai_robot_book」の1行だけが表示されているはずです．「ai_robot_book」の行の「STOP」のアイコンをクリックしてください．なお，「ai_robot_book」はコンテナを起動したときにコンテナに付けた名前です．  
+<img src="images/windows-dockerdesktop-1.png" width="70%">
 
 ### コンテナの再開
 
+停止したコンテナを再び使えるようにするには，Docker Desktopのウィンドウをを開き，「Containers」の中の「ai_robot_book」の行の「START」のアイコンをクリックしてください．  
+<img src="images/windows-dockerdesktop-2.png" width="70%">
 
 ### コンテナの削除
 
-
+コンテナ上での作業内容を全て破棄して，コンテナを削除するには，Docker Desktopのウィンドウをを開き，「Containers」の中の「ai_robot_book」の行の「DELETE」のアイコンをクリックしてください．  
+<img src="images/windows-dockerdesktop-3.png" width="70%">
 
 ## デスクトップ環境の使い方（共通事項）
 
@@ -179,3 +221,5 @@ Q&Aなどを追加する予定です．
 - 2022-08-28: ドキュメントの整備
 
 ## 参考文献
+
+
