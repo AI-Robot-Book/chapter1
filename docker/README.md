@@ -126,6 +126,7 @@ docker rm ai_robot_book
 ### コンテナの起動
 
 - 利用するコンピュータをインターネットに接続します．
+- Docker Desktopを起動します．
 - 起動コマンドが長いので，それを毎回入力しなくて済むようにバッチファイルを用意しました．
   - [ここからバッチファイルrun.bat](https://raw.githubusercontent.com/AI-Robot-Book/docker-ros2-desktop-ai-robot-book/ai-robot-book/run.bat)をダウンロードします．
   - ダウンロードしたファイルを適当なディレクトリに置きます．
