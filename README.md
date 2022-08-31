@@ -6,7 +6,7 @@ ROS2とPythonで作って学ぶAIロボット入門（出村・萩原・升谷�
 
 - **[docker](docker):** この本で使うROS2の開発環境，サンプルプログラムなど一式を丸ごと入れたDockerイメージを使うための説明です．
 - **[happy_mini_open_platform](happy_mini_open_platform):** Happy Mini Open Platformの情報を掲載します．
-
+- **[non_docker](non_docker):** Dockerを使わない場合のセットアップ．
    
 ## 補足情報
 - 今のところありません．
