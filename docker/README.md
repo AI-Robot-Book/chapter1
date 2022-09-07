@@ -170,7 +170,7 @@ docker rm ai_robot_book
 - VNCビューアを使う場合
 
   - Windowsで使うことのできるVNCビューアには色々ありますが，ここではTightVNC Viewerを使います．[公式サイト](https://www.tightvnc.com/download.php)から「TightVNC for Windows」のインストーラをダウンロードし，インストールしてください．TightVNC Viewerはその中に含まれています．
-  - Windowsのスタートメニューか検索からTightVNC Viewerを見つけ起動します．
+  - Windowsのスタートメニューか検索からTightVNC Viewerを見つけ起動します．  
     <img src="images/windows-tightvnc-1.png" width="50%">
 
   - 「Remote Host」欄に「127.0.0.1:15900」を入力し，「Connect」をクリックします．  
@@ -256,7 +256,7 @@ DockerのホストとしてUbuntu Linuxを使っている場合は，Dockerの�
 
 ### USB接続の機器
 
-- このDockerコンテナは，``オプションを付けて起動していますので，ホストの
+- このDockerコンテナは，`--privileged`オプションを付けて起動していますので，ホストの
 `/dev`以下のデバイスファイルをコンテナから参照できます．
 - USB機器のデバイスファイルは，機器を接続した後にデバイスファイルができるため，利用するハードウェア機器はコンテナを起動するより前にホストに接続してください．
 
