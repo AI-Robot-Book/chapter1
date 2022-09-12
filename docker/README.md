@@ -31,8 +31,9 @@ ROS2とPythonで作って学ぶAIロボット入門（出村・萩原・升谷�
 
 コンピュータがインターネットに接続している状態で，端末ウィンドウに以下を入力します．
 ```
-sudo apt install docker
-sudo adduser ＄USER docker
+sudo apt install docker.io
+sudo adduser $USER docker
+reboot
 ```
 
 ### コンテナの起動
