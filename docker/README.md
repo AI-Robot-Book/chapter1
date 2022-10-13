@@ -13,6 +13,9 @@ ROS2とPythonで作って学ぶAIロボット入門（出村・萩原・升谷�
   - この本のサンプルプログラム
 - Dockerイメージの作り方については，この文書では説明しません．[こちらのリポジトリ](https://github.com/AI-Robot-Book/docker-ros2-desktop-ai-robot-book)を見てください．
 
+## お知らせ
+- [aruco_node_tfノードの実行時のエラー回避](#aruco)
+
 ## 目次
 
 - [Ubuntu Linuxの場合](#ubuntu-linuxの場合)
@@ -23,7 +26,6 @@ ROS2とPythonで作って学ぶAIロボット入門（出村・萩原・升谷�
 - [著者](#著者)
 - [履歴](#履歴)
 - [参考文献](#参考文献)
-
 
 ## Ubuntu Linuxの場合
 
@@ -263,7 +265,13 @@ DockerのホストとしてUbuntu Linuxを使っている場合は，Dockerの�
 
 ## ヘルプ
 
-Q&Aなどを追加する予定です．
+- <a name="aruco"></a>aruco_node_tfノードが`AttributeError: module 'cv2' has no attribute 'aruco'` または `AttributeError: module 'cv2.aruco' has no attribute 'drawAxis'`
+というエラーを出して実行できません．これを回避するために，以下のコマンドを実行してください．
+  ```
+  pip3 uninstall opencv-python
+  pip3 uninstall opencv-contrib-python
+  pip3 install opencv-contrib-python==4.5.5.64
+  ```
 
 ## Windows リモートデスクトップ接続の利用（未完成）
 
