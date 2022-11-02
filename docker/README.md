@@ -273,6 +273,18 @@ DockerのホストとしてUbuntu Linuxを使っている場合は，Dockerの�
   pip3 uninstall opencv-contrib-python
   pip3 install opencv-contrib-python==4.5.5.64
   ```
+- `rosdep` コマンドの利用について
+  - Dockerイメージの中に`rosdep`はインストールしてますが，Dockerイメージのビルドの際に初期化でエラーになるため，初期化していません．このエラーの原因や解決方法はまだわかっていません．
+  - Dockerコンテナの中で`rosdep`を使うには，まず初期化してください．
+    ```
+    sudo rosdep init
+    ```
+  - 現状では，HTTPSプロキシの環境下以外では，`rosdep update`を実行するとエラーになります．この原因は，Dockerコンテナの起動用シェルスクリプト（バッチファイル）では，ホストからプロキシの設定を引き継ぐようにしており，プロキシの設定がない場合に環境変数`https_proxy`の値が空で設定されてしまうからです．この問題を回避するために以下のようにしてください．
+    ```
+    unset https_proxy
+    rosdep update
+    ```
+  - 現状では，教材のソースディレクトリで`rosdep install`を実行すると，いくつかエラーが出ますが，実害はないようです．
 
 ## Windows リモートデスクトップ接続の利用（未完成）
 
